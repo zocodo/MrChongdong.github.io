@@ -8,34 +8,40 @@
   <link rel="dns-prefetch" href="https://mrchongdong.github.io">
   <title>Hexo搭建带分类的博客 | Wormholes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
+  <meta name="description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/
+注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
+
 
 这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的
 
 全局安装 Browsersync
 
-1npm install -g browser-sy">
+1npm install -g browser">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建带分类的博客">
 <meta property="og:url" content="https://mrchongdong.github.io/2016/11/19/Hexo搭建带分类的博客/index.html">
 <meta property="og:site_name" content="Wormholes">
-<meta property="og:description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
+<meta property="og:description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/
+注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
+
 
 这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的
 
 全局安装 Browsersync
 
-1npm install -g browser-sy">
+1npm install -g browser">
 <meta property="og:updated_time" content="2016-11-19T05:53:20.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo搭建带分类的博客">
-<meta name="twitter:description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
+<meta name="twitter:description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/
+注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
+
 
 这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的
 
 全局安装 Browsersync
 
-1npm install -g browser-sy">
+1npm install -g browser">
   
     <link rel="alternative" href="/atom.xml" title="Wormholes" type="application/atom+xml">
   
@@ -190,9 +196,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p>本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">https://xuanwo.org/2015/03/26/hexo-intor/</a><br>注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略</p>
+<li>
+<p>本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">https://xuanwo.org/2015/03/26/hexo-intor/</a>
+注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略</p>
 </li>
-<li><p>这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的</p>
+<li>
+<p>这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的</p>
 <ul>
 <li>全局安装 Browsersync</li>
 </ul>
@@ -210,20 +219,24 @@
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure>
 </li>
-<li><p>将博客的文章分类（如果主题不带menu项（步骤2），请换一个）</p>
+<li>
+<p>将博客的文章分类（如果主题不带menu项（步骤2），请换一个）</p>
 <ol>
-<li><p>博客文件夹根目录下打开<code>/scaffolds/post.md</code>文件，在<code>tags</code>上添加<code>categories:</code>,文件会变成这样，以后每次执行 <code>hexo n 文件名</code> 都会带有<code>categories</code>项</p>
+<li>
+<p>博客文件夹根目录下打开<code>/scaffolds/post.md</code>文件，在<code>tags</code>上添加<code>categories:</code>,文件会变成这样，以后每次执行 <code>hexo n 文件名</code> 都会带有<code>categories</code>项</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: &#123;&#123; title &#125;&#125;</div><div class="line">date: &#123;&#123; date &#125;&#125;</div><div class="line">categories:  // 这行是新增的</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
 </li>
-<li><p>打开你使用的主题文件夹，也就是 <code>/themes/xxx</code>，再用文件编辑器打开主题目录里的<code>_config.yml</code>文件，找到<code>menu</code>栏，你会看到类似于下面的那些配置</p>
+<li>
+<p>打开你使用的主题文件夹，也就是 <code>/themes/xxx</code>，再用文件编辑器打开主题目录里的<code>_config.yml</code>文件，找到<code>menu</code>栏，你会看到类似于下面的那些配置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  主页: /</div><div class="line">  随笔: /tags/随笔</div><div class="line">  Redux: /categories/redux // 这个是我添加的分类</div></pre></td></tr></table></figure>
 </li>
-<li><p>然后 cmd 执行<code>hexo n 文件名</code>创建一个新的文章，根据提示路径找到那个文件，编辑器打开后在<code>categories:</code>写上你的分类，例如<code>categories: redux</code> (这个就相当于路径<code>categories/redux/</code>)，也正好匹配了步骤2 中的 Redux 这个分类的路径</p>
+<li>
+<p>然后 cmd 执行<code>hexo n 文件名</code>创建一个新的文章，根据提示路径找到那个文件，编辑器打开后在<code>categories:</code>写上你的分类，例如<code>categories: redux</code> (这个就相当于路径<code>categories/redux/</code>)，也正好匹配了步骤2 中的 Redux 这个分类的路径</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Hello World</div><div class="line">date: 2016-11-19 10:50:31</div><div class="line">categories: rudex  // 相当于路径 categories/redux/ 和 Redux 按钮路径一样</div><div class="line">tags: [&apos;测试分类&apos;]</div><div class="line">---</div><div class="line">这里开始写文章内容</div></pre></td></tr></table></figure>
 <p>然后在页面点击 Redux 按钮就可以看到设置为<code>categories:redux</code>所有文章，搭建一个带分类的blog就大功告成了</p>
-<p>##注意把上面我的注释掉##</p>
 </li>
 </ol>
+<p>##注意把上面我的注释掉##</p>
 </li>
 </ul>
 
