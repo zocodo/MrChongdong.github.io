@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Wormholes">
 <meta property="og:description" content="Webpack区分生产环境和开发环境
 ​写这个的主要是提供给入门 webpack 的新手 , 相信很多刚入门的 (好比如我自己) 都不清楚怎么区分生成环境或者开发环境 , 而看到网上开源的代码 , 好比如react-hot-loader这个热更新怎么使用的案例 , 都带有下面这些代码 , 刚开始的时候我也看不懂这是什么 😦😦😦 , 网上找到了一些片面的回答 , 我在这里整理一下 😜😜😜">
-<meta property="og:updated_time" content="2016-11-22T14:37:36.737Z">
+<meta property="og:updated_time" content="2016-11-22T14:39:00.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack区分开发环境和生成环境">
 <meta name="twitter:description" content="Webpack区分生产环境和开发环境
@@ -180,13 +180,14 @@
 <ol>
 <li>
 <p>首先要有一个公共的配置项 , 方便我们在生产和开发环境公用 , 用于<code>expore</code>一些可以共用的配置 , 好比如 <code>entry</code> , <code>output</code> , <code>loader</code> , <code>plugins</code> 这些配置</p>
-<p>webpack.config.base.js</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webpack.config.base.js</div></pre></td></tr></table></figure>
 </li>
 <li>
 <p>然后有开发专用的配置文件和生产的配置文件 , 这两个文件共用<code>webpack.config.base.js</code>这个基本配置项</p>
-<p>webpack.config.dev.js</p>
-<p>webpack.config.product.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">webpack.config.dev.js</div><div class="line">   </div><div class="line">webpack.config.product.js</div></pre></td></tr></table></figure>
 </li>
+</ol>
+<ol start="3">
 <li>
 <p>我们一般运行项目都是使用<code>npm start</code>这种<code>node</code>命令执行 , 所以在运行的时候 , 我们设置一下环境变量 , 在 <code>package.json</code>文件中设置</p>
  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"start"</span>: <span class="string">"cross-env NODE_ENV=development &amp;&amp; node-dev ./webpackServer.js"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
