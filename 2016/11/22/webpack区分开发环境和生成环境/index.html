@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://mrchongdong.github.io">
   <title>webpack区分开发环境和生成环境 | Wormholes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="¶Webpack区分生产环境和开发环境
-​写这个的主要是提供给入门 webpack 的新手 , 相信很多刚入门的 (好比如我自己) 都不清楚怎么区分生成环境或者开发环境 , 而看到网上开源的代码 , 好比如react-hot-loader这个热更新怎么使用的案例 , 都带有下面这些代码 , 刚开始的时候我也看不懂这是什么 😦😦😦 , 网上找到了一些片面的回答 , 我在这里整理一下 😜😜�">
+  <meta name="description" content="Webpack区分生产环境和开发环境
+​写这个的主要是提供给入门 webpack 的新手 , 相信很多刚入门的 (好比如我自己) 都不清楚怎么区分生成环境或者开发环境 , 而看到网上开源的代码 , 好比如react-hot-loader这个热更新怎么使用的案例 , 都带有下面这些代码 , 刚开始的时候我也看不懂这是什么 😦😦😦 , 网上找到了一些片面的回答 , 我在这里整理一下 😜😜😜">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack区分开发环境和生成环境">
 <meta property="og:url" content="https://mrchongdong.github.io/2016/11/22/webpack区分开发环境和生成环境/index.html">
 <meta property="og:site_name" content="Wormholes">
-<meta property="og:description" content="¶Webpack区分生产环境和开发环境
-​写这个的主要是提供给入门 webpack 的新手 , 相信很多刚入门的 (好比如我自己) 都不清楚怎么区分生成环境或者开发环境 , 而看到网上开源的代码 , 好比如react-hot-loader这个热更新怎么使用的案例 , 都带有下面这些代码 , 刚开始的时候我也看不懂这是什么 😦😦😦 , 网上找到了一些片面的回答 , 我在这里整理一下 😜😜�">
+<meta property="og:description" content="Webpack区分生产环境和开发环境
+​写这个的主要是提供给入门 webpack 的新手 , 相信很多刚入门的 (好比如我自己) 都不清楚怎么区分生成环境或者开发环境 , 而看到网上开源的代码 , 好比如react-hot-loader这个热更新怎么使用的案例 , 都带有下面这些代码 , 刚开始的时候我也看不懂这是什么 😦😦😦 , 网上找到了一些片面的回答 , 我在这里整理一下 😜😜😜">
 <meta property="og:updated_time" content="2016-11-22T14:15:38.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack区分开发环境和生成环境">
-<meta name="twitter:description" content="¶Webpack区分生产环境和开发环境
-​写这个的主要是提供给入门 webpack 的新手 , 相信很多刚入门的 (好比如我自己) 都不清楚怎么区分生成环境或者开发环境 , 而看到网上开源的代码 , 好比如react-hot-loader这个热更新怎么使用的案例 , 都带有下面这些代码 , 刚开始的时候我也看不懂这是什么 😦😦😦 , 网上找到了一些片面的回答 , 我在这里整理一下 😜😜�">
+<meta name="twitter:description" content="Webpack区分生产环境和开发环境
+​写这个的主要是提供给入门 webpack 的新手 , 相信很多刚入门的 (好比如我自己) 都不清楚怎么区分生成环境或者开发环境 , 而看到网上开源的代码 , 好比如react-hot-loader这个热更新怎么使用的案例 , 都带有下面这些代码 , 刚开始的时候我也看不懂这是什么 😦😦😦 , 网上找到了一些片面的回答 , 我在这里整理一下 😜😜😜">
   
     <link rel="alternative" href="/atom.xml" title="Wormholes" type="application/atom+xml">
   
@@ -174,7 +174,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="webpack区分生产环境和开发环境"><a class="header-anchor" href="#webpack区分生产环境和开发环境">¶</a>Webpack区分生产环境和开发环境</h2>
+        <h2>Webpack区分生产环境和开发环境</h2>
 <p>​写这个的主要是提供给入门 webpack 的新手 , 相信很多刚入门的 (好比如我自己) 都不清楚怎么区分生成环境或者开发环境 , 而看到网上开源的代码 , 好比如<code>react-hot-loader</code>这个热更新怎么使用的案例 , 都带有下面这些代码 , 刚开始的时候我也看不懂这是什么 😦😦😦 , 网上找到了一些片面的回答 , 我在这里整理一下 😜😜😜</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(process.env.xxx !== <span class="string">'product'</span>)&#123;</div><div class="line">  <span class="comment">// 开发环境专用代码</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ol>

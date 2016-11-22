@@ -11,7 +11,7 @@
   <meta name="description" content="一个简单的 redux 项目只需要几步
 
 
-¶创建store
+创建store
 使用 createStore 方法创建 store ，值得注意的是 store 在 redux 里是唯一的，存储页面所有的 state，而且只允许通过 reducers 来改变它，下面开始讲解创建一个 store 步骤，以及一些遇到的坑
 createStore( reducer , [initialState] , enhancer )">
 <meta property="og:type" content="article">
@@ -21,7 +21,7 @@ createStore( reducer , [initialState] , enhancer )">
 <meta property="og:description" content="一个简单的 redux 项目只需要几步
 
 
-¶创建store
+创建store
 使用 createStore 方法创建 store ，值得注意的是 store 在 redux 里是唯一的，存储页面所有的 state，而且只允许通过 reducers 来改变它，下面开始讲解创建一个 store 步骤，以及一些遇到的坑
 createStore( reducer , [initialState] , enhancer )">
 <meta property="og:image" content="https://mrchongdong.github.io/img/applyMiddleWare.png">
@@ -31,7 +31,7 @@ createStore( reducer , [initialState] , enhancer )">
 <meta name="twitter:description" content="一个简单的 redux 项目只需要几步
 
 
-¶创建store
+创建store
 使用 createStore 方法创建 store ，值得注意的是 store 在 redux 里是唯一的，存储页面所有的 state，而且只允许通过 reducers 来改变它，下面开始讲解创建一个 store 步骤，以及一些遇到的坑
 createStore( reducer , [initialState] , enhancer )">
 <meta name="twitter:image" content="https://mrchongdong.github.io/img/applyMiddleWare.png">
@@ -191,7 +191,7 @@ createStore( reducer , [initialState] , enhancer )">
         <p>一个简单的 redux 项目只需要几步</p>
 <ol>
 <li>
-<h2 id="创建store"><a class="header-anchor" href="#创建store">¶</a>创建<code>store</code></h2>
+<h2>创建<code>store</code></h2>
 <p>使用 <code>createStore</code> 方法创建 <code>store</code> ，值得注意的是 <code>store</code> 在 <code>redux</code> 里是唯一的，存储页面所有的 <code>state</code>，而且只允许通过 <code>reducers</code> 来改变它，下面开始讲解创建一个 <code>store</code> 步骤，以及一些遇到的坑</p>
 <p><code>createStore( reducer , [initialState] , enhancer )</code></p>
 <p>该方法可以传三个参数</p>
@@ -228,12 +228,12 @@ subscribe(listener) 注册监听器；</p>
 </ul>
 </li>
 <li>
-<h2 id="provider"><a class="header-anchor" href="#provider">¶</a>Provider##</h2>
+<h2>Provider##</h2>
 <p><code>Provider</code>这个模块是作为整个<code>App</code>的容器，在你原有的<code>App Container</code>的基础上再包上一层，它的工作很简单，就是接受<code>Redux</code>的<code>store</code>作为<code>props</code>，并将其声明为context的属性之一，子组件可以在声明了<code>contextTypes</code>之后可以方便的通过this.context.store访问到store。不过我们的组件通常不需要这么做，将store放在context里，是为了给下面的connect用的。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> &#123; render &#125; <span class="keyword">from</span> <span class="string">'react-dom'</span></div><div class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></div><div class="line"><span class="keyword">import</span> &#123; Router, Route, browserHistory &#125; <span class="keyword">from</span> <span class="string">'react-router'</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span> <span class="comment">// 刚才创建的store</span></div><div class="line"></div><div class="line">render(</div><div class="line">  &lt;Provider store=&#123; store &#125;&gt;</div><div class="line">    &lt;Router history=&#123; browserHistory &#125;&gt;</div><div class="line">      &lt;Route path="/"&gt;</div><div class="line">        &lt;IndexRoute component=&#123; component1 &#125;&gt;&lt;/IndexRoute&gt;</div><div class="line">        &lt;Route path="/test" component=&#123; component2 &#125;&gt;&lt;/Route&gt;</div><div class="line">      &lt;/Route&gt;</div><div class="line">    &lt;/Router&gt;</div><div class="line">  &lt;/Provider&gt;,</div><div class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>)</div><div class="line">)</div></pre></td></tr></table></figure>
 </li>
 <li>
-<h2 id="connect连接store和组件"><a class="header-anchor" href="#connect连接store和组件">¶</a>connect连接store和组件##</h2>
+<h2>connect连接store和组件##</h2>
 <p>在你需要用到<code>state</code>的组件注入，注入关键方法<code>connect</code>，你就可以在对应的组件里使用<code>this.props</code>拿到对应<code>state</code>的数据了，也可以通过<code>this.props.dispatch(action)</code>来更新<code>redux</code>的<code>store</code>，最好用到哪个<code>state</code>就传哪个<code>state</code>，避免不必要的性能损耗</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</div><div class="line">  render()&#123;</div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;this.props.todo.text&lt;/div&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 拿到todo的state</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(<span class="function"><span class="params">state</span> =&gt;</span> (&#123; <span class="attr">todo</span>: state.todo &#125;))(Test)</div></pre></td></tr></table></figure>
 <p>如果你的工程支持ES7语法，上面的代码可以写成，效果是一样的</p>
