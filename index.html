@@ -178,22 +178,16 @@
 <ol>
 <li>
 <p>首先要有一个公共的配置项 , 方便我们在生产和开发环境公用 , 用于<code>expore</code>一些可以共用的配置 , 好比如 <code>entry</code> , <code>output</code> , <code>loader</code> , <code>plugins</code> 这些配置</p>
-<blockquote>
 <p>webpack.config.base.js</p>
-</blockquote>
 </li>
 <li>
 <p>然后有开发专用的配置文件和生产的配置文件 , 这两个文件共用<code>webpack.config.base.js</code>这个基本配置项</p>
-<blockquote>
 <p>webpack.config.dev.js</p>
 <p>webpack.config.product.js</p>
-</blockquote>
 </li>
 <li>
 <p>我们一般运行项目都是使用<code>npm start</code>这种<code>node</code>命令执行 , 所以在运行的时候 , 我们设置一下环境变量 , 在 <code>package.json</code>文件中设置</p>
-<blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="string">"scripts"</span>: &#123;</div><div class="line">&gt;   <span class="string">"start"</span>: <span class="string">"cross-env NODE_ENV=development &amp;&amp; node-dev ./webpackServer.js"</span></div><div class="line">&gt; &#125;</div><div class="line">&gt;</div></pre></td></tr></table></figure>
-</blockquote>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">  <span class="string">"start"</span>: <span class="string">"cross-env NODE_ENV=development &amp;&amp; node-dev ./webpackServer.js"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><code>cross-env</code>是兼容 Linux 和 Windos 平台的弄得设置变量的库 , <code>npm i cross --save-dev</code> 一下就好 , 这里的 <code>NODE_ENV=development</code> 就是设置了一个 <code>NODE_ENV:development</code> 的环境变量 , 为什么要设置这个东西 ? 我们在开发过程中可能会用到编译过程中不会用到的辅助开发的库 (比如热更新 <code>react-hot-loader</code> 和 <code>redux</code>开发工具这些) , 通过这个变量我们可以动态的避免编译这些生产环境中没有必要编译的库</p>
 </li>
 <li>
