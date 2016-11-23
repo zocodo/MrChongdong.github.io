@@ -25,7 +25,7 @@ createStore( reducer , [initialState] , enhancer )">
 使用 createStore 方法创建 store ，值得注意的是 store 在 redux 里是唯一的，存储页面所有的 state，而且只允许通过 reducers 来改变它，下面开始讲解创建一个 store 步骤，以及一些遇到的坑
 createStore( reducer , [initialState] , enhancer )">
 <meta property="og:image" content="https://mrchongdong.github.io/img/applymiddleware.png">
-<meta property="og:updated_time" content="2016-11-23T15:32:36.239Z">
+<meta property="og:updated_time" content="2016-11-23T15:43:28.399Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redux菜鸟入门">
 <meta name="twitter:description" content="一个简单的 redux 项目只需要几步
@@ -54,7 +54,7 @@ createStore( reducer , [initialState] , enhancer )">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img src="./img/IMG_0593.GIF" class="js-avatar">
+			<img src="/img/IMG_0593.GIF" class="js-avatar">
 			
 		</a>
 
@@ -130,7 +130,7 @@ createStore( reducer , [initialState] , enhancer )">
 		<header id="header" class="inner">
 			<div class="profilepic">
 				
-					<img src="./img/IMG_0593.GIF" class="js-avatar">
+					<img src="/img/IMG_0593.GIF" class="js-avatar">
 				
 			</div>
 			<hgroup>
@@ -220,7 +220,7 @@ subscribe(listener) 注册监听器；</p>
 </li>
 <li>
 <p>在这里讲一下中间件是什么? 中间件实质上就是对<code>store.dispatch()</code>进行了改造增强 , 因为<code>reducer</code>的每次更新都需要通过<code>dispatch(action)</code>来触发 , 使用了中间件后 , 每次调用<code>dispatch()</code>时实际调用的都你改造增强后的<code>dispatch()</code>方法</p>
-<p><img src="https://mrchongdong.github.io/img/applymiddleware.png" alt="applyMiddleWare"></p>
+<p><img src="/img/applymiddleware.png" alt="applyMiddleWare"></p>
 <p>源码解读推荐查看:  <a href="http://simplyy.space/article/577a04850c83425c446a0f83" target="_blank" rel="external">http://simplyy.space/article/577a04850c83425c446a0f83</a></p>
 <p>​</p>
 <p>上面就已经把创建<code>store</code>的方法介绍完了，先缓一缓，后面讲解怎么把<code>store</code>和组件连接起来…</p>
