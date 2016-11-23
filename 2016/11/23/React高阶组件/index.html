@@ -6,42 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://mrchongdong.github.io">
-  <title>Hexo搭建带分类的博客 | Wormholes</title>
+  <title>React高阶组件 | Wormholes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/
-注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
-
-
-这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的
-
-全局安装 Browsersync
-
-1npm install -g browser">
+  <meta name="description" content="高阶组件是什么? 实际上是在组件的外面包装了一层 , 在普通组件和所谓高阶组件间假如了逻辑后 , 再渲染普通组件 , 比如给普通组件添加 state , 就像 Redux 的 connect 就是高阶组件 , 获取需要的 state , 如下:
+1exports default connect((state) =&amp;gt; (&amp;#123; test:state.test &amp;#125;))(YourC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo搭建带分类的博客">
-<meta property="og:url" content="https://mrchongdong.github.io/2016/11/19/Hexo搭建带分类的博客/index.html">
+<meta property="og:title" content="React高阶组件">
+<meta property="og:url" content="https://mrchongdong.github.io/2016/11/23/React高阶组件/index.html">
 <meta property="og:site_name" content="Wormholes">
-<meta property="og:description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/
-注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
-
-
-这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的
-
-全局安装 Browsersync
-
-1npm install -g browser">
-<meta property="og:updated_time" content="2016-11-19T05:53:20.409Z">
+<meta property="og:description" content="高阶组件是什么? 实际上是在组件的外面包装了一层 , 在普通组件和所谓高阶组件间假如了逻辑后 , 再渲染普通组件 , 比如给普通组件添加 state , 就像 Redux 的 connect 就是高阶组件 , 获取需要的 state , 如下:
+1exports default connect((state) =&amp;gt; (&amp;#123; test:state.test &amp;#125;))(YourC">
+<meta property="og:updated_time" content="2016-11-23T14:24:15.343Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo搭建带分类的博客">
-<meta name="twitter:description" content="本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：https://xuanwo.org/2015/03/26/hexo-intor/
-注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略
-
-
-这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的
-
-全局安装 Browsersync
-
-1npm install -g browser">
+<meta name="twitter:title" content="React高阶组件">
+<meta name="twitter:description" content="高阶组件是什么? 实际上是在组件的外面包装了一层 , 在普通组件和所谓高阶组件间假如了逻辑后 , 再渲染普通组件 , 比如给普通组件添加 state , 就像 Redux 的 connect 就是高阶组件 , 获取需要的 state , 如下:
+1exports default connect((state) =&amp;gt; (&amp;#123; test:state.test &amp;#125;))(YourC">
   
     <link rel="alternative" href="/atom.xml" title="Wormholes" type="application/atom+xml">
   
@@ -177,7 +156,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-Hexo搭建带分类的博客" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-React高阶组件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -187,7 +166,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo搭建带分类的博客
+      React高阶组件
     </h1>
   
 
@@ -195,68 +174,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>
-<p>本文章基于使用 hexo 主题的博客，搭建的教程网上有很多，我就不再次写步骤了，推荐查看：<a href="https://xuanwo.org/2015/03/26/hexo-intor/" target="_blank" rel="external">https://xuanwo.org/2015/03/26/hexo-intor/</a>
-注意：上面搭建步骤中的更换域名不是必须的，对域名没有要求的请忽略</p>
-</li>
-<li>
-<p>这一步解决对于 hexo 开启服务器无法检测文件更改从而刷新网页的</p>
-<ul>
-<li>全局安装 Browsersync</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g browser-sync</div></pre></td></tr></table></figure>
-<ul>
-<li>安装结束后执行下面命令，能显示对应版本则表示安装成功</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">browser-sync --version</div></pre></td></tr></table></figure>
-<ul>
-<li>安装 hexo 端 Browsersync 插件</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-browsersync --save</div></pre></td></tr></table></figure>
-<ul>
-<li>重启 hexo 服务器</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s</div></pre></td></tr></table></figure>
-</li>
-<li>
-<p>将博客的文章分类（如果主题不带menu项（步骤2），请换一个）</p>
-<ol>
-<li>
-<p>博客文件夹根目录下打开<code>/scaffolds/post.md</code>文件，在<code>tags</code>上添加<code>categories:</code>,文件会变成这样，以后每次执行 <code>hexo n 文件名</code> 都会带有<code>categories</code>项</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: &#123;&#123; title &#125;&#125;</div><div class="line">date: &#123;&#123; date &#125;&#125;</div><div class="line">categories:  // 这行是新增的</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
-</li>
-<li>
-<p>打开你使用的主题文件夹，也就是 <code>/themes/xxx</code>，再用文件编辑器打开主题目录里的<code>_config.yml</code>文件，找到<code>menu</code>栏，你会看到类似于下面的那些配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  主页: /</div><div class="line">  随笔: /tags/随笔</div><div class="line">  Redux: /categories/redux // 这个是我添加的分类</div></pre></td></tr></table></figure>
-</li>
-<li>
-<p>然后 cmd 执行<code>hexo n 文件名</code>创建一个新的文章，根据提示路径找到那个文件，编辑器打开后在<code>categories:</code>写上你的分类，例如<code>categories: redux</code> (这个就相当于路径<code>categories/redux/</code>)，也正好匹配了步骤2 中的 Redux 这个分类的路径</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: Hello World</div><div class="line">date: 2016-11-19 10:50:31</div><div class="line">categories: rudex  // 相当于路径 categories/redux/ 和 Redux 按钮路径一样</div><div class="line">tags: [&apos;测试分类&apos;]</div><div class="line">---</div><div class="line">这里开始写文章内容</div></pre></td></tr></table></figure>
-<p>然后在页面点击 Redux 按钮就可以看到设置为<code>categories:redux</code>所有文章，搭建一个带分类的blog就大功告成了</p>
-</li>
-</ol>
-<p>##注意把上面我的注释掉##</p>
-</li>
-</ul>
+        <p>高阶组件是什么? 实际上是在组件的外面包装了一层 , 在普通组件和所谓高阶组件间假如了逻辑后 , 再渲染普通组件 , 比如给普通组件添加 <code>state</code> , 就像 <code>Redux</code> 的 <code>connect</code> 就是高阶组件 , 获取需要的 <code>state</code> , 如下:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">exports <span class="keyword">default</span> connect(<span class="function">(<span class="params">state</span>) =&gt;</span> (&#123; <span class="attr">test</span>:state.test &#125;))(YourComponent)</div></pre></td></tr></table></figure>
+<p>下面模拟一下connect这个高阶组件写法:</p>
+<p><strong>定义</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// ES5</span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">sendDataToProps</span>(<span class="params">objData</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">Component</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="class"><span class="keyword">class</span> <span class="title">NewComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</div><div class="line">      render()&#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">          &lt;Component</div><div class="line">            &#123; ...this.props &#125;</div><div class="line">            data=&#123; ...objData &#125;</div><div class="line">          /&gt;</div><div class="line">        )</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// ES6</div><div class="line">exports default (objData)</div><div class="line">	=&gt; (Component)</div><div class="line">		=&gt; class extends React.Component&#123;</div><div class="line">          render()&#123;</div><div class="line">            return (</div><div class="line">              &lt;Component</div><div class="line">                &#123; ...this.props &#125;</div><div class="line">                data=&#123; ...objData &#125;</div><div class="line">              /&gt;</div><div class="line">            )</div><div class="line">          &#125;</div><div class="line">		&#125;</div></pre></td></tr></table></figure>
+<p><strong>使用</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></div><div class="line"><span class="comment">// 刚才定义的高阶组件</span></div><div class="line"><span class="keyword">import</span> sendDataToProps <span class="keyword">from</span> <span class="string">'./sendDataToProps'</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">YourApp</span> <span class="title">extents</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</div><div class="line">  render()&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.props) <span class="comment">//在浏览器中看看</span></div><div class="line">    <span class="keyword">return</span> (</div><div class="line">      &lt;div&gt;我是普通组件&lt;/div&gt;</div><div class="line">    )</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 是不是跟connect很像,当然这个高阶组件没有实际意义,具体逻辑需要你自己定义</span></div><div class="line">exports <span class="keyword">default</span> sendDataToProps(&#123;<span class="attr">test</span>:<span class="string">'我是来测试的'</span>&#125;)(YourApp)</div></pre></td></tr></table></figure>
+<p>高阶组件有什么用? 好比如每个组件使用 <code>shouldComponentUpdate()</code> 对比 <code>preState</code>和 <code>nextState</code> , 两个<code>state</code> 一样的话 , 就不会触发普通组件的重新渲染 ( react优化 )  <strong>思路:</strong></p>
+<p>​	在高阶组件中把普通组件的<code>shouldComponentUpdate()</code>逻辑对比写好 , 通过替换普通组件的原型<code>shouldComponentUpdate</code>方法后 , 只需要在你需要优化的组件中把高阶组件按照上面的使用方法使用 , 就不需要在每个组件中都写一次 <code>shouldComponentUpdate</code>方法 , 是不是很像函数复用</p>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/11/19/Hexo搭建带分类的博客/" class="archive-article-date">
-  	<time datetime="2016-11-19T04:27:57.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-19</time>
+      <a href="/2016/11/23/React高阶组件/" class="archive-article-date">
+  	<time datetime="2016-11-23T14:22:39.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-11-23</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo文章分类/">hexo文章分类</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高阶组件/">高阶组件</a></li></ul>
 	</div>
 
       
 	<div class="article-category tagcloud">
 	<i class="icon-price-tags"></i>
-	<a class="article-category-link" href="/categories/other/">other</a>
+	<a class="article-category-link" href="/categories/react/">react</a>
 	</div>
 
 
@@ -268,18 +212,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/11/22/webpack区分开发环境和生成环境/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          webpack区分开发环境和生成环境
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/11/19/Redux菜鸟入门/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Redux菜鸟入门</div>
+    <a href="/2016/11/22/webpack区分开发环境和生成环境/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">webpack区分开发环境和生成环境</div>
       <i class="icon-circle-right"></i>
     </a>
   
