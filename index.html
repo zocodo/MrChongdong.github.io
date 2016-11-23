@@ -445,7 +445,7 @@ subscribe(listener) 注册监听器；</p>
 </li>
 <li>
 <p>在这里讲一下中间件是什么? 中间件实质上就是对<code>store.dispatch()</code>进行了改造增强 , 因为<code>reducer</code>的每次更新都需要通过<code>dispatch(action)</code>来触发 , 使用了中间件后 , 每次调用<code>dispatch()</code>时实际调用的都你改造增强后的<code>dispatch()</code>方法</p>
-<p><img src="https://mrchongdong.github.io/img/applyMiddleWare.png" alt="applyMiddleWare"></p>
+<p><img src="https://mrchongdong.github.io/img/applymiddleware.png" alt="applyMiddleWare"></p>
 <p>源码解读推荐查看:  <a href="http://simplyy.space/article/577a04850c83425c446a0f83" target="_blank" rel="external">http://simplyy.space/article/577a04850c83425c446a0f83</a></p>
 <p>​</p>
 <p>上面就已经把创建<code>store</code>的方法介绍完了，先缓一缓，后面讲解怎么把<code>store</code>和组件连接起来…</p>
